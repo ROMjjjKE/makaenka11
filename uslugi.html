@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Работы — смена колёс, балансировка, ремонт проколов | Макаёнка 11</title>
+<meta name="description" content="Сезонная смена колёс, балансировка, ремонт проколов и вулканизация, перебортировка, проверка шин и дисков, микроавтобусы и RunFlat.">
+<meta property="og:title" content="Работы — смена колёс, балансировка, ремонт проколов | Макаёнка 11">
+<meta property="og:description" content="Сезонная смена колёс, балансировка, ремонт проколов и вулканизация, перебортировка, проверка шин и дисков, микроавтобусы и RunFlat.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#15181A">
+<style>
+:root{--asphalt:#15181A;--panel:#1D2124;--paper:#F2F0EB;--white:#fff;--ink:#15181A;--graph:#575E58;
+--red:#C0331C;--red-d:#A82A15;--yellow:#FFC93C;--ice:#5AB0FF;--line:rgba(21,24,26,.16);
+--pad:24px;--max:1300px;--disp:'Anton',Impact,system-ui,sans-serif;--body:'Golos Text',system-ui,sans-serif;--mono:'Space Mono',ui-monospace,monospace}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.62 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:400;line-height:.94;letter-spacing:.005em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}[hidden]{display:none!important}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.header{position:sticky;top:0;z-index:40;background:rgba(242,240,235,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.header__in{display:flex;align-items:center;gap:20px;padding:11px 0}
+.logo{display:flex;align-items:center;gap:9px}
+.logo__mark{display:grid;place-items:center;min-width:38px;height:34px;padding:0 6px;background:var(--ink);color:var(--yellow);font:700 13px/1 var(--mono);letter-spacing:.02em}
+.logo__txt{display:flex;flex-direction:column;line-height:1.1}
+.logo__txt b{font:400 15px/1 var(--disp);letter-spacing:.08em}
+.logo__txt i{font:400 9.5px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--graph);font-style:normal}
+.nav{display:flex;gap:19px;margin-left:auto;font-size:13.5px}
+.nav a{padding:6px 0;border-bottom:2px solid transparent;color:#3A4042}
+.nav a:hover,.nav a.is-on{border-color:var(--red);color:var(--ink)}
+.header__tel{font:700 13px/1 var(--mono);letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 20px;font:600 12.5px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;transition:.18s}
+.btn:hover{background:#000;border-color:#000}
+.btn--red{background:var(--red);border-color:var(--red)}
+.btn--red:hover{background:var(--red-d);border-color:var(--red-d)}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:#fff}
+.burger{display:none;width:42px;height:38px;border:1px solid var(--line);background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer}
+.burger i{display:block;width:17px;height:2px;background:var(--ink)}
+.burger.is-close i:first-child{transform:rotate(45deg) translateY(3px)}
+.burger.is-close i:last-child{transform:rotate(-45deg) translateY(-3px)}
+.hero{position:relative;min-height:min(95svh,810px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#101315}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,15,17,.6),rgba(12,15,17,.22) 38%,rgba(12,15,17,.72) 74%,#0E1113 100%)}
+.hero__in{position:relative;z-index:2;width:100%;padding:clamp(34px,6vw,62px) 0 clamp(18px,3vw,26px)}
+.hero h1{font-size:clamp(2.5rem,7.6vw,6.4rem);letter-spacing:.005em}
+.hero__lede{max-width:48ch;margin:16px 0 20px;color:rgba(255,255,255,.84);font-size:clamp(.94rem,1.35vw,1.05rem)}
+.hero__acts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(18px,3vw,32px)}
+.hero .btn--line{border-color:rgba(255,255,255,.45);color:#fff}
+.hero .btn--line:hover{background:#fff;color:var(--ink)}
+.hero__facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.24)}
+.hero__facts div{padding:13px 14px 0 0}
+.hero__facts b{display:block;font:400 clamp(1.05rem,2vw,1.5rem)/1.05 var(--disp);letter-spacing:.01em}
+.hero__facts span{font:400 9.5px/1.5 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.drawer{position:fixed;inset:0;z-index:90;background:rgba(10,13,15,.74);display:none}
+.drawer[data-open]{display:block}
+.drawer__in{position:absolute;inset:0 0 0 auto;width:min(400px,92vw);background:var(--paper);padding:22px;overflow-y:auto}
+.drawer__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.drawer__nav{display:grid;font:400 20px/1 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.drawer__nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+.drawer__cta{width:100%;justify-content:center;margin-top:18px}
+.drawer__note{font-size:12.5px;color:var(--graph);margin-top:12px}
+body.is-locked{overflow:hidden}
+.mbar{display:none}
+@media (max-width:1024px){
+.nav{display:none}.burger{display:flex}.header__tel{display:none}.header__in{gap:10px}
+.hero__facts{grid-template-columns:1fr 1fr}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Golos+Text:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="header"><div class="header__in wrap">
+<a class="logo" href="index.html"><span class="logo__mark">М11</span><span class="logo__txt"><b>МАКАЁНКА 11</b><i>шиномонтаж · Минск</i></span></a>
+<nav class="nav" aria-label="Основное меню"><a href="index.html">Главная</a><a href="uslugi.html" class="is-on">Работы</a><a href="ceny.html">Цены</a><a href="proverka.html">Проверка колёс</a><a href="marki.html">Марки</a><a href="kontakty.html">Контакты</a></nav>
+<a class="header__tel" href="tel:+375298099191">+375 (29) 809-91-91</a>
+<a class="btn btn--red" href="https://wa.me/375298099191" target="_blank" rel="noopener">Записаться</a>
+<button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+</div></header>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Меню" hidden>
+<div class="drawer__in">
+<div class="drawer__top">
+<a class="logo" href="index.html"><span class="logo__mark">М11</span><span class="logo__txt"><b>МАКАЁНКА 11</b><i>шиномонтаж</i></span></a>
+<button class="burger is-close" type="button" data-close aria-label="Закрыть меню"><i></i><i></i></button>
+</div>
+<nav class="drawer__nav"><a href="index.html">Главная</a><a href="uslugi.html">Работы</a><a href="ceny.html">Цены</a><a href="proverka.html">Проверка колёс</a><a href="marki.html">Марки</a><a href="kontakty.html">Контакты</a></nav>
+<a class="btn btn--red drawer__cta" href="tel:+375298099191">Позвонить +375 (29) 809-91-91</a>
+<p class="drawer__note">Минск, ул. Макаёнка, 11. Ежедневно 09:00–21:00. Запись по телефону или в мессенджере.</p>
+</div></div>
+<main>
+<section class="phero"><img src="assets/img/balance.jpg" alt="Балансировка колеса" width="1600" height="900">
+<div class="phero__in"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Работы</div>
+<h1>Смена, балансировка,<br>ремонт</h1><p>Шесть направлений шиномонтажа на СТО: от сезонного комплекта до RunFlat и микроавтобусов.</p></div></div></section>
+<section class="section"><div class="wrap"><div class="wdetail" id="w1">
+<p class="season-tag">01 / направление</p>
+<h3>Сезонная смена колёс</h3>
+<p class="lede">Комплект снимаем, переобуваем и ставим обратно: демонтаж, монтаж шин, балансировка, затяжка и проверка давления.</p>
+<ul class="list"><li>снятие и установка колёс</li><li>демонтаж и монтаж шин</li><li>балансировка каждого колеса</li><li>затяжка и проверка давления</li></ul>
+</div><div class="wdetail" id="w2">
+<p class="season-tag">02 / направление</p>
+<h3>Балансировка колёс</h3>
+<p class="lede">Вибрация на скорости 80–120 — чаще всего разбалансировка. Проверяем колесо на станке и корректируем грузиками.</p>
+<ul class="list"><li>проверка колеса на станке</li><li>коррекция грузиками</li><li>контроль после установки</li><li>проверка биения диска</li></ul>
+</div><div class="wdetail" id="w3">
+<p class="season-tag">03 / направление</p>
+<h3>Ремонт проколов и вулканизация</h3>
+<p class="lede">Колесо спускает? Сначала смотрим повреждение: где прокол, какой угол, задет ли корд. Дальше решаем, ремонт или замена.</p>
+<ul class="list"><li>осмотр повреждения</li><li>вулканизация и установка заплатки</li><li>проверка герметичности</li><li>проверка давления после ремонта</li></ul>
+</div><div class="wdetail" id="w4">
+<p class="season-tag">04 / направление</p>
+<h3>Перебортировка</h3>
+<p class="lede">Снятие шины с диска и установка обратно: после сезона, при смене комплекта или когда шина стоит неправильно.</p>
+<ul class="list"><li>демонтаж шины с диска</li><li>монтаж и посадка борта</li><li>балансировка</li><li>контроль посадки на диск</li></ul>
+</div><div class="wdetail" id="w5">
+<p class="season-tag">05 / направление</p>
+<h3>Проверка шин и дисков</h3>
+<p class="lede">Смотрим остаток протектора, боковины, посадочные места и состояние диска — чтобы сезон не начался с сюрприза.</p>
+<ul class="list"><li>замер остатка протектора</li><li>осмотр боковин и борта</li><li>проверка диска на биение</li><li>рекомендации по комплекту</li></ul>
+</div><div class="wdetail" id="w6">
+<p class="season-tag">06 / направление</p>
+<h3>Микроавтобусы и сложные шины</h3>
+<p class="lede">Низкопрофильные, RunFlat и крупные диски — отдельная работа. Стоимость уточняем до записи, чтобы не было сюрпризов.</p>
+<ul class="list"><li>микроавтобусы и лёгкий коммерческий</li><li>низкопрофильные шины</li><li>RunFlat</li><li>крупные диски R17 и выше</li></ul>
+</div>
+<div class="card" style="margin-top:24px"><p class="season-tag">важно</p>
+<p style="margin:0 0 12px">Стоимость для микроавтобусов, крупных дисков, низкопрофильных и RunFlat шин уточняем до записи. Возможность безопасного ремонта повреждённой шины определяем после осмотра. Итоговую сумму согласуем до начала работы.</p>
+<div style="display:flex;flex-wrap:wrap;gap:9px"><a class="btn btn--red" href="tel:+375298099191">Позвонить +375 (29) 809-91-91</a><a class="btn btn--line" href="ceny.html">Смотреть цены</a></div></div>
+</div></section>
+<section class="cta"><div class="wrap cta__in"><div><h2>Сообщите размер —<br>назовём стоимость</h2><p>Марка авто, размер шин (например 205/55 R16) и работа. Этого достаточно.</p></div>
+<div class="cta__acts"><a class="btn" href="tel:+375298099191">Позвонить</a><a class="btn btn--ghost" href="https://wa.me/375298099191" target="_blank" rel="noopener">WhatsApp</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap">
+<div class="footer__top">
+<div class="footer__about"><a class="logo logo--f" href="index.html"><span class="logo__mark">М11</span><span class="logo__txt"><b>МАКАЁНКА 11</b><i>шиномонтаж · Минск</i></span></a>
+<p>Шиномонтаж на СТО: сезонная смена колёс, балансировка, вулканизация, перебортировка, проверка шин и дисков. Минск, ул. Макаёнка, 11, ежедневно 09:00–21:00.</p></div>
+<div><h4>Разделы</h4><ul><li><a href="index.html">Главная</a></li><li><a href="uslugi.html">Работы</a></li><li><a href="ceny.html">Цены</a></li><li><a href="proverka.html">Проверка колёс</a></li><li><a href="marki.html">Марки</a></li><li><a href="kontakty.html">Контакты</a></li></ul></div>
+<div><h4>Работы</h4><ul><li><a href="uslugi.html">Сезонная смена</a></li><li><a href="uslugi.html">Балансировка</a></li><li><a href="uslugi.html">Проколы и вулканизация</a></li><li><a href="uslugi.html">Перебортировка</a></li><li><a href="uslugi.html">Проверка шин и дисков</a></li></ul></div>
+<div><h4>Связь</h4><ul>
+<li><a href="tel:+375298099191">+375 (29) 809-91-91</a></li>
+<li><a href="https://maps.google.com/?q=%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%2C+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9C%D0%B0%D0%BA%D0%B0%D1%91%D0%BD%D0%BA%D0%B0+11" target="_blank" rel="noopener">Минск, ул. Макаёнка, 11</a></li>
+<li>Ежедневно 09:00–21:00</li>
+<li style="margin-top:10px"><div class="msgr"><a href="https://wa.me/375298099191" target="_blank" rel="noopener" aria-label="WhatsApp" style="color:#25D366"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m5.3 14.1c-.2.6-1.2 1.2-1.9 1.2-.5 0-1.1 0-2-.4a11 11 0 0 1-4.4-3.9c-.5-.8-.9-1.7-.9-2.5 0-.7.4-1.4.9-1.8.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.4.5c-.1.2-.2.3 0 .5a8 8 0 0 0 3.4 2.9c.2.1.4.1.5-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4s0 .5-.1.9"/></svg></a><a href="viber://chat?number=%2B375298099191" aria-label="Viber" style="color:#7360F2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 2 3 5.6 3 10c0 2.5 1.3 4.7 3.4 6.1L6 21l4-1.6c.6.1 1.3.2 2 .2 5 0 9-3.6 9-8s-4-8-9-8m3.6 11.3c-.4.9-1.9 1.6-2.7 1.5-2.4-.3-4.6-2.1-5.4-4.4-.3-.8.2-2 1-2.4.3-.2.7 0 .9.3l.7 1.2c.1.3 0 .5-.2.7-.3.2-.2.5.1.9.6.8 1.2 1.2 1.9 1.5.4.2.6 0 .8-.2s.4-.3.7-.2l1.3.6c.3.2.3.6.2.9"/></svg></a><a href="https://t.me/+375298099191" target="_blank" rel="noopener" aria-label="Telegram" style="color:#229ED9"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.8 4.2 2.9 11.4c-.9.3-.9 1.5 0 1.8l4.6 1.5 1.7 5.3c.2.7 1 .9 1.5.3l2.5-2.6 4.6 3.4c.6.4 1.4 0 1.5-.7l2.5-15c.1-.8-.6-1.4-1.5-1.2M9.4 14.3l8.4-5.6-6.8 6.6-.2 3z"/></svg></a></div></li>
+</ul></div>
+</div>
+<div class="footer__bottom"><span>© <span id="yr">2026</span> СТО Макаёнка 11 · шиномонтаж</span>
+<span><a href="politika.html">Политика обработки персональных данных</a></span></div>
+</div></footer>
+<div class="mbar" role="navigation" aria-label="Быстрая связь">
+<a href="tel:+375298099191"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1z"/></svg>Позвонить</a>
+<a href="https://wa.me/375298099191" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m5.3 14.1c-.2.6-1.2 1.2-1.9 1.2-.5 0-1.1 0-2-.4a11 11 0 0 1-4.4-3.9c-.5-.8-.9-1.7-.9-2.5 0-.7.4-1.4.9-1.8.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.4.5c-.1.2-.2.3 0 .5a8 8 0 0 0 3.4 2.9c.2.1.4.1.5-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4s0 .5-.1.9"/></svg>WhatsApp</a>
+<a href="viber://chat?number=%2B375298099191"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 2 3 5.6 3 10c0 2.5 1.3 4.7 3.4 6.1L6 21l4-1.6c.6.1 1.3.2 2 .2 5 0 9-3.6 9-8s-4-8-9-8m3.6 11.3c-.4.9-1.9 1.6-2.7 1.5-2.4-.3-4.6-2.1-5.4-4.4-.3-.8.2-2 1-2.4.3-.2.7 0 .9.3l.7 1.2c.1.3 0 .5-.2.7-.3.2-.2.5.1.9.6.8 1.2 1.2 1.9 1.5.4.2.6 0 .8-.2s.4-.3.7-.2l1.3.6c.3.2.3.6.2.9"/></svg>Viber</a>
+<a href="https://t.me/+375298099191" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.8 4.2 2.9 11.4c-.9.3-.9 1.5 0 1.8l4.6 1.5 1.7 5.3c.2.7 1 .9 1.5.3l2.5-2.6 4.6 3.4c.6.4 1.4 0 1.5-.7l2.5-15c.1-.8-.6-1.4-1.5-1.2M9.4 14.3l8.4-5.6-6.8 6.6-.2 3z"/></svg>Telegram</a>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
